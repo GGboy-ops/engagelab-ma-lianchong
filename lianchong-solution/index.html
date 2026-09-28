@@ -643,7 +643,7 @@
           <span class="pill">客户定制提案</span>
         </div>
         <h1>CATLINK · <span class="grad">设备绑定与商城订单后的触达方案</span></h1>
-        <p class="hero-subtitle">App 商城订单要已签收且满 3 天，才通知外呼。天猫发生在淘宝里，打开 CATLINK App 之后才引导绑定设备。</p>
+        <p class="hero-subtitle">App 商城订单满 3 天且已签收后，通知外呼并同步企业微信链接。用户打开 CATLINK App、名下还没有设备时，次日补一条绑定提醒。</p>
         <div class="grid grid-4">
           <div class="stat"><div class="stat-value">5 类</div><div class="stat-label">官网在售硬件：猫砂盆、喂食器、饮水机、摄像头、净味器，由同一个 CATLINK App 连接</div></div>
           <div class="stat"><div class="stat-value info">2 个</div><div class="stat-label">购买入口：天猫，以及 CATLINK App 内商城</div></div>
@@ -657,19 +657,18 @@
     <section id="s-market" class="section-plain">
       <div class="wrap">
         <div class="eyebrow">业务洞察</div>
-        <h2><span class="secnum">1</span>设备数据在 CATLINK App 里，淘宝里的签收到不了这里</h2>
-        <p>猫砂余量、出粮和如厕记录，都要设备绑到 CATLINK App 之后才有。天猫的浏览、付款和签收发生在淘宝 App，不是 CATLINK 的埋点，不能拿来启动旅程。买家靠包装或卖家自己的消息来到 CATLINK App，那些步骤不在本方案里。人第一次打开 CATLINK App 且还没有设备时，才进入旅程 2。</p>
+        <h2><span class="secnum">1</span>设备绑上之后，余量、如厕和进食才有记录</h2>
+        <p>猫砂余量、出粮和如厕记录，从设备绑到 CATLINK App 开始。本方案先接两件事：App 商城订单签收满 3 天后添加企业微信；用户打开 App 且名下还没有设备时，次日补一条绑定提醒。</p>
         <div class="spacer-md"></div>
         <div class="card"><div class="card-header">本方案用到的入口</div><div class="card-body">
           <table>
             <thead><tr><th>入口</th><th>能用来触发的事</th><th>驱动旅程</th></tr></thead>
             <tbody>
-              <tr class="tone-info"><td>CATLINK App 商城</td><td>订单支付、签收。用户已安装 App</td><td>1</td></tr>
-              <tr><td>天猫（淘宝 App）</td><td>付款和签收都不在 CATLINK 内，本方案不监听</td><td>—</td></tr>
+              <tr class="tone-info"><td>CATLINK App 商城</td><td>订单支付、签收</td><td>1</td></tr>
               <tr class="tone-info"><td>CATLINK App 首次打开</td><td>尚未绑定设备</td><td>2</td></tr>
               <tr><td>SCOOPER 猫砂盆</td><td>绑定、首次如厕、猫砂余量、集便仓</td><td>3 · 4 · 6</td></tr>
               <tr><td>ONE 喂食器 / PURE 饮水机</td><td>绑定、首次出粮或饮水、余粮、水量</td><td>3 · 5 · 6</td></tr>
-              <tr><td>GUARD 摄像头 / FRESH 净味器</td><td>官网在售，本方案不编排</td><td>拓展</td></tr>
+              <tr><td>GUARD 摄像头 / FRESH 净味器</td><td>离线与滤芯提醒，测试期后单独立项</td><td>拓展</td></tr>
             </tbody>
           </table>
           <ul class="notelist"><li>产品名取自 catlinks.cn 首页。旅程编号对应第 3 节。</li></ul>
@@ -680,8 +679,8 @@
     <section id="s-funnel" class="section-plain">
       <div class="wrap">
         <div class="eyebrow">用户漏斗与行业基准</div>
-        <h2><span class="secnum">2</span>用户漏斗：从打开 CATLINK App 开始，而不是从淘宝签收开始</h2>
-        <p>能被本方案碰到的折损，从打开 CATLINK App 开始：还没绑定设备、绑定后还没用起来、用起来之后余量偏低却没补。天猫签收不在这张表里。这些比例测试期用贵司 App 数据校准，本节不画对比柱。</p>
+        <h2><span class="secnum">2</span>用户漏斗：加上顾问、绑上设备、用起来、补上耗材</h2>
+        <p>折损落在这几步：下单后还没加上企业微信、打开 App 还没绑定、绑定后还没用起来、用起来之后余量偏低却没补。比例在测试期用贵司 App 数据校准。</p>
         <div class="spacer-md"></div>
         <div class="card"><div class="card-header">漏斗环节与进入事件</div><div class="card-body">
           <table>
@@ -695,7 +694,7 @@
               <tr><td>使用中 → 打开健康页</td><td>健康标记变为需关注</td><td>—</td></tr>
             </tbody>
           </table>
-          <ul class="notelist"><li>公开资料没有这些层的转化率。效果以测试期对照组为准，不引用其他行业的到诊率或打开率充数。</li></ul>
+          <ul class="notelist"><li>各层转化率在测试期用贵司 App 数据校准。</li></ul>
         </div></div>
       </div>
     </section>
@@ -704,20 +703,20 @@
       <div class="wrap">
         <div class="eyebrow">场景总览</div>
         <h2><span class="secnum">3</span>六条旅程：先把人和设备接上，再谈补充耗材</h2>
-        <p>旅程 1 只覆盖 App 商城。电话由贵司现有外呼系统拨打，本方案在该拨的时候通知它，并在接通时发短信。旅程 2 不监听淘宝。旅程 4、5 不重复 App 里已经弹出的即时余量提醒。健康类消息不写体重、次数和排泄状态。</p>
+        <p>App 商城订单满 3 天且已签收后，通知贵司外呼系统拨打，接通时发企业微信添加链接。打开 App 且尚未绑定的用户，次日补一条绑定提醒。余量在 App 当场提醒之后，两天仍偏低才再发。健康类只打开入口，正文不出现体重、次数和排泄状态。</p>
         <div class="spacer-md"></div>
         <table>
           <thead><tr><th>#</th><th>场景</th><th>承接漏斗环节</th><th>主渠道组合</th><th>亮点</th><th>见效节奏</th><th>预期效果</th></tr></thead>
           <tbody>
             <tr class="tone-info"><td>1</td><td>下单后添加企业微信</td><td>App 商城下单 → 添加企业微信</td><td>SMS + App Push</td><td>满 3 天且已签收才通知外呼；接通时发添加短信；未接通也发短信</td><td>首月见效</td><td>添加率以对照组比较</td></tr>
-            <tr class="tone-info"><td>2</td><td>打开 App 后完成绑定</td><td>首次打开 App → 绑定设备</td><td>App Push</td><td>人已经在 CATLINK App 里；当天引导留在页面上，次日仍未绑定再推一条</td><td>首月见效</td><td>打开后绑定率以对照组比较</td></tr>
+            <tr class="tone-info"><td>2</td><td>打开 App 后完成绑定</td><td>首次打开 App → 绑定设备</td><td>App Push</td><td>当天由页面引导绑定，次日仍未绑定再推一条</td><td>首月见效</td><td>打开后绑定率以对照组比较</td></tr>
             <tr class="tone-info"><td>3</td><td>绑定后首次使用</td><td>绑定 → 首次成功使用</td><td>App Push</td><td>每台设备单独计时；说明链接用绑定事件里的地址，不按机型拆旅程</td><td>首月见效</td><td>首次使用率以对照组比较</td></tr>
             <tr class="tone-info"><td>4</td><td>猫砂余量补充</td><td>使用中 → 猫砂或集便仓补充</td><td>App Push</td><td>App 当场已提醒的不重复；两天后仍偏低才发，发送前再查一次余量</td><td>首月见效</td><td>补充完成率以对照组比较</td></tr>
             <tr class="tone-info"><td>5</td><td>余粮与水量补充</td><td>使用中 → 余粮或水量补充</td><td>App Push</td><td>喂食器与饮水机共用结构，按告警类型换商城链接</td><td>首月见效</td><td>补充完成率以对照组比较</td></tr>
             <tr class="tone-info"><td>6</td><td>健康数据只给入口</td><td>使用中 → 打开健康页</td><td>App Push</td><td>只同步「需关注」这个标记；正文不写体重、时长和排泄状态</td><td>首月见效</td><td>健康页打开率以对照组比较</td></tr>
             <tr><td colspan="7" style="background:#f8fafc;font-weight:700;color:var(--text-3);font-size:12.5px;letter-spacing:.04em">拓展场景 · 测试期后按优先级推进，本方案不编排</td></tr>
             <tr><td>7</td><td>摄像头与净味器滤芯</td><td>绑定 → 耗材或离线</td><td>App Push</td><td>官网在售，但本次没有写进主线的告警事件</td><td>依赖客户侧能力（事件清单）</td><td>回访率</td></tr>
-            <tr><td>8</td><td>其他国家的同一套旅程</td><td>各层</td><td>按该项目的通道</td><td>流程相同，语言、商城链接和外呼号码按项目配置，不在旅程里按国家分支</td><td>长周期培育</td><td>与中国大陆项目分开验收</td></tr>
+            <tr><td>8</td><td>其他国家的对应旅程</td><td>各层</td><td>按该项目的通道</td><td>流程相同，语言、商城链接和外呼号码按项目配置</td><td>长周期培育</td><td>与中国大陆项目分开验收</td></tr>
           </tbody>
         </table>
         <ul class="notelist"><li>建议测试期优先上线旅程 1、2、3。本方案所列效果区间均为行业公开参考值，<span class="bold">非承诺值</span>，实际以测试期数据为准。</li></ul>
@@ -729,7 +728,7 @@
         <div class="scene-head"><div class="scene-num">01</div><div class="scene-head-main"><h2>旅程 1｜下单后添加企业微信</h2></div></div>
         <div class="row" style="margin-bottom:14px"><span class="pill pill-warn">优先级最高</span><span class="pill pill-info">App 商城下单之后</span><span class="pill">满 3 天且已签收 · 通知外呼并同步短信 · SMS + App Push</span></div>
         <div class="callout info" style="margin-bottom:14px"><div class="callout-body">
-          <p>电话不是在这里拨出的。满 3 天、包裹已签收、对方还没加企业微信，才通知贵司现有的外呼系统去打；短信在接通时发出。15 分钟内没有接通回执，短信仍然发出，避免链接只挂在电话上。</p>
+          <p>满 3 天、包裹已签收、对方还没加企业微信，通知贵司现有外呼系统拨打；短信在接通时发出。15 分钟内没有接通回执，短信仍然发出，添加链接留在短信里。</p>
           <p style="margin-top:6px"><span class="bold">建议渠道</span>：SMS，并配 App Push　｜　<span class="bold">触发方式</span>：事件「App 商城订单支付成功」，且尚未添加企业微信　｜　<span class="bold">退出条件</span>：提前退出「已添加企业微信」</p>
         </div></div>
         <div class="grid grid-2-1">
@@ -741,10 +740,10 @@
               <li>电话没接通时，添加链接如果只在通话里说，对方就没有了</li>
             </ul></div></div>
             <div class="card"><div class="card-header">旅程组件配置</div><div class="card-body"><ul class="cfg-list">
-              <li>开始：事件「App 商城订单支付成功」，用户属性「已添加企业微信」为假。提前退出：事件「已添加企业微信」。转化统计：事件「已添加企业微信」，监听窗口 3 天。退出后可再次进入，间隔 30 天。天猫订单不进入这条旅程。</li>
+              <li>开始：事件「App 商城订单支付成功」，用户属性「已添加企业微信」为假。提前退出：事件「已添加企业微信」。转化统计：事件「已添加企业微信」，监听窗口 3 天。退出后可再次进入，间隔 30 天。</li>
               <li>等待：3 个日历日。</li>
               <li>可发送时间：终端时区 10:00–20:00。</li>
-              <li>Webhook：按订单号向 App 商城自己的订单系统查询是否已签收。不查询淘宝。</li>
+              <li>Webhook：按订单号向 App 商城订单系统查询是否已签收。</li>
               <li>条件分支：返回值「已签收」。
                 <ul>
                   <li>未签收：进入「等待事件 · 7 天内等待订单签收」。已签收则进入下面的同意分支；超时结束，不拨打。</li>
@@ -764,7 +763,7 @@
                   <li>超时：仍发与接通分支相同的短信和 App Push，避免没有接通回执时链接丢失。</li>
                 </ul>
               </li>
-              <li>结束。外呼同意、接通回执由贵司外呼系统回写。没有回执时走超时分支，不把电话本身当成一条渠道。</li>
+              <li>结束。外呼同意、接通回执由贵司外呼系统回写。没有回执时走超时分支。</li>
             </ul></div></div>
             <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">企业微信添加率以对照组比较</span></p><p>没有可引用的公开添加率。对照组是仍按「下单满 3 天即打、不论是否签收」的现有方式。</p></div></div>
           </div>
@@ -777,7 +776,7 @@
         <div class="scene-head"><div class="scene-num">02</div><div class="scene-head-main"><h2>旅程 2｜打开 App 后完成绑定</h2></div></div>
         <div class="row" style="margin-bottom:14px"><span class="pill pill-warn">见效最快</span><span class="pill pill-info">首次打开之后</span><span class="pill">App 内事件 · 次日补位 · App Push</span></div>
         <div class="callout info" style="margin-bottom:14px"><div class="callout-body">
-          <p>淘宝里的签收不是 CATLINK 的事件，这条旅程不从天猫启动。人已经打开 CATLINK App、名下还没有设备时才进入。打开当时页面上会有绑定引导，次日仍未绑定再推一条。</p>
+          <p>用户第一次打开 CATLINK App 时，页面上已有绑定引导。名下还没有设备、次日仍未绑定的，再推一条，直接进入绑定页。</p>
           <p style="margin-top:6px"><span class="bold">建议渠道</span>：App Push　｜　<span class="bold">触发方式</span>：事件「App 首次启动」，已绑定设备数等于 0　｜　<span class="bold">退出条件</span>：提前退出「设备绑定成功」</p>
         </div></div>
         <div class="grid grid-2-1">
@@ -785,23 +784,23 @@
           <div class="grid" style="grid-template-columns:1fr;gap:12px;align-content:start;">
             <div class="callout warn"><div class="callout-title">业务痛点</div><div class="callout-body"><ul>
               <li>不绑定就没有余量、如厕和进食记录</li>
-              <li>还没安装 App 的天猫买家，不在这条旅程的可达范围里</li>
+              <li>打开当天已经绑上的人，不应再收到绑定提醒</li>
             </ul></div></div>
             <div class="card"><div class="card-header">旅程组件配置</div><div class="card-body"><ul class="cfg-list">
               <li>开始：事件「App 首次启动」（SDK 自带）。提前退出：事件「设备绑定成功」。转化统计：事件「设备绑定成功」，监听窗口 3 天。不可再次进入。</li>
               <li>条件分支：用户属性「已绑定设备数」。
                 <ul>
-                  <li>大于 0：结束。打开和绑定若发生在同一次使用里，用这个属性拦住，不等待事件去听绑定。</li>
+                  <li>大于 0：结束。</li>
                   <li>等于 0 或为空：进入「等待 · 1 个日历日」。</li>
                 </ul>
               </li>
               <li>等待：1 个日历日。期间绑定成功由提前退出打断。</li>
               <li>可发送时间：终端时区 09:00–21:00。</li>
-              <li>App Push 通知消息：文案「还没有绑定设备，绑定后才能看到这台设备的记录」，深度链接到绑定页。不附带企业微信和商品。</li>
-              <li>App Push 应用内消息：打开 App 时展示同一入口。</li>
+              <li>App Push 通知消息：文案「还没有绑定设备，绑定后才能看到这台设备的记录」，深度链接到绑定页。</li>
+              <li>App Push 应用内消息：打开 App 时展示绑定页入口。</li>
               <li>结束。</li>
             </ul></div></div>
-            <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">首次打开后 3 日内绑定率以对照组比较</span></p><p>分母是打开了 CATLINK App 的人，不是天猫成交人数。绑定是后面四条设备旅程的入口。</p></div></div>
+            <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">首次打开后 3 日内绑定率以对照组比较</span></p><p>绑定完成后，首次使用、耗材和健康入口才有对象。</p></div></div>
           </div>
         </div>
       </div>
@@ -827,7 +826,7 @@
               <li>等待：1 个日历日。</li>
               <li>可发送时间：终端时区 09:00–21:00。</li>
               <li>App Push 通知消息：标题用设备类型，链接用事件里的说明页地址，缺省时落到 App 设备页。不写猫咪体重和如厕数据。</li>
-              <li>App Push 应用内消息：打开 App 时展示同一入口。</li>
+              <li>App Push 应用内消息：打开 App 时展示该设备的说明页。</li>
               <li>结束。</li>
             </ul></div></div>
             <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">绑定后 3 日内首次使用率以对照组比较</span></p><p>当天已经完成的人在等待期间退出，不计入触达后的转化。</p></div></div>
@@ -863,7 +862,7 @@
                   <li>仍偏低，且未同意：App Push 通知消息「这台猫砂盆仍需处理，请打开 App 查看」，不带购买链接。</li>
                 </ul>
               </li>
-              <li>结束。不在正文里写剩余百分比以外的猫咪数据。剩余百分比来自 Webhook，没有返回值时不写数字，只用「仍需处理」。</li>
+              <li>结束。正文不出现体重、如厕次数和排泄状态。</li>
             </ul></div></div>
             <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">告警后 7 日内恢复率以对照组比较</span></p><p>两天内自行加砂或清空的人被提前退出。商城成交只统计已同意营销的那一支。</p></div></div>
           </div>
@@ -876,7 +875,7 @@
         <div class="scene-head"><div class="scene-num">05</div><div class="scene-head-main"><h2>旅程 5｜余粮与水量补充</h2></div></div>
         <div class="row" style="margin-bottom:14px"><span class="pill pill-info">使用之中</span><span class="pill pill-info">耗材补充</span><span class="pill">喂食器与饮水机 · 先等两天 · App Push</span></div>
         <div class="callout info" style="margin-bottom:14px"><div class="callout-body">
-          <p>结构和旅程 4 相同，进入事件换成余粮或水量。不和猫砂告警合成一条，避免同一天对同一只猫连发两条购买消息时说不清是哪台设备。</p>
+          <p>喂食器余粮和饮水机水量单独提醒。告警两天后仍偏低才发，文案指向对应的那台设备。</p>
           <p style="margin-top:6px"><span class="bold">建议渠道</span>：App Push　｜　<span class="bold">触发方式</span>：事件「余量告警」，类型为余粮或水量　｜　<span class="bold">退出条件</span>：提前退出「余量已恢复」，按设备编号与类型过滤</p>
         </div></div>
         <div class="grid grid-2-1">
@@ -898,7 +897,7 @@
                   <li>仍偏低且未同意：App Push 只写「请打开 App 查看这台设备」，不带购买链接。</li>
                 </ul>
               </li>
-              <li>结束。与旅程 4 同一天都要发时，由测试计划里的每日上限拦住第二条。</li>
+              <li>结束。</li>
             </ul></div></div>
             <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">告警后 7 日内恢复率以对照组比较</span></p><p>不和旅程 4 加总成一个恢复率。喂食器与饮水机分开看。</p></div></div>
           </div>
@@ -926,10 +925,10 @@
               <li>等待：4 小时。</li>
               <li>可发送时间：终端时区 09:00–21:00。</li>
               <li>App Push 通知消息：文案「有一项记录需要查看，请打开 App」。深度链接到该宠物的健康页。</li>
-              <li>App Push 应用内消息：打开 App 时展示同一入口，覆盖关闭了通知的用户。</li>
+              <li>App Push 应用内消息：打开 App 时展示该宠物的健康页，覆盖关闭了通知的用户。</li>
               <li>结束。合规约束：正文不含体重、如厕次数、进食量和排泄状态。这条消息不附带药品或问诊推销。</li>
             </ul></div></div>
-            <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">标记出现后 24 小时内的健康页打开率以对照组比较</span></p><p>四小时内已经打开的人被提前退出。不把打开率写成就医率。</p></div></div>
+            <div class="callout success"><div class="callout-title">预期效益参考</div><div class="callout-body"><p><span class="bold">标记出现后 24 小时内的健康页打开率以对照组比较</span></p><p>四小时内已经打开的人在等待期间退出。</p></div></div>
           </div>
         </div>
       </div>
@@ -943,7 +942,6 @@
           <table>
             <thead><tr><th>事件或属性</th><th>类型</th><th>关键字段</th><th>提供方</th><th>驱动的旅程</th></tr></thead>
             <tbody>
-              <tr><td>App 启动、通知权限</td><td>事件</td><td>SDK 标准名</td><td>SDK 自带</td><td>安装状态</td></tr>
               <tr><td>App 商城订单支付成功、订单签收</td><td>事件</td><td>订单号</td><td>客户上报（App 商城）</td><td>1</td></tr>
               <tr><td>App 首次启动</td><td>事件</td><td>SDK 标准名</td><td>SDK 自带</td><td>2</td></tr>
               <tr><td>已绑定设备数</td><td>用户属性</td><td>数字。绑定成功时由客户写入，未绑定为空或 0</td><td>客户写入</td><td>2</td></tr>
@@ -969,13 +967,13 @@
             <thead><tr><th>渠道</th><th>主要用途</th><th>平均打开率</th><th>适用市场</th></tr></thead>
             <tbody>
               <tr><td>App Push</td><td>绑定、首次使用、耗材与健康入口；已同意时带商城链接</td><td>约 3%</td><td>中国大陆 · CATLINK App</td></tr>
-              <tr><td>Web Push</td><td>本方案未使用——购买发生在天猫和 App 商城，未核实到独立站通知订阅</td><td>—</td><td>—</td></tr>
-              <tr><td>Email</td><td>本方案未使用——未核实到邮件营销同意入口</td><td>—</td><td>—</td></tr>
-              <tr><td>SMS</td><td>外呼接通时的企业微信链接。不用于寻找尚未安装 App 的天猫买家</td><td>—</td><td>中国大陆</td></tr>
-              <tr><td>WhatsApp</td><td>本方案未使用——本项目面向中国大陆。其他国家另建项目，不在旅程里分支</td><td>—</td><td>—</td></tr>
+              <tr><td>Web Push</td><td>本方案未使用——绑定与下单后的触达在 CATLINK App</td><td>—</td><td>—</td></tr>
+              <tr><td>Email</td><td>本方案未使用——本方案的触达在 App 与短信</td><td>—</td><td>—</td></tr>
+              <tr><td>SMS</td><td>外呼接通时的企业微信链接</td><td>—</td><td>中国大陆</td></tr>
+              <tr><td>WhatsApp</td><td>本方案未使用——本项目面向中国大陆</td><td>—</td><td>—</td></tr>
             </tbody>
           </table>
-          <ul class="notelist"><li>打开率为行业公开参考区间，非承诺值；各渠道计费方式以商务报价为准。App Push 约 3% 为直接打开率的全行业中位，分母为当月发送。电话由贵司外呼系统拨打，不在本表。</li></ul>
+          <ul class="notelist"><li>打开率为行业公开参考区间，非承诺值；各渠道计费方式以商务报价为准。App Push 约 3% 为直接打开率的全行业中位，分母为当月发送。电话由贵司外呼系统拨打。</li></ul>
         </div></div>
         <div class="spacer-md"></div>
         <div class="card"><div class="card-header">合规与安全</div><div class="card-body">
@@ -1003,7 +1001,7 @@
               <tr><td>4</td><td>复盘扩面</td><td>效果报告；排期旅程 5</td><td>决策是否扩面</td><td>主指标相对对照组的提升</td></tr>
             </tbody>
           </table>
-          <ul class="notelist"><li>App SDK 接入按 3 人日估算（含 SDK 自带的首次启动）。签收状态只查 App 商城自己的订单，余量是否仍偏低由设备云经 Webhook 返回。外呼接口与企微回写不计入上述人日。不接入淘宝内的行为。旅程 4 与 5 同一天第二条由每日上限拦住。</li></ul>
+          <ul class="notelist"><li>App SDK 接入按 3 人日估算（含首次启动）。签收状态由 App 商城订单系统在发送时返回，余量是否仍偏低由设备云经 Webhook 返回。外呼接口与企微回写不计入上述人日。</li></ul>
         </div></div>
       </div>
     </section>
